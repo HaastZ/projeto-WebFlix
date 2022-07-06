@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/detalhes.css">
+    <title>DetalhesLançamentos</title>
+</head>
+<body>
+    <div class="container">
+        <div id="filmeDetalhe" class="row">
+          <button type="button" class="btn btn-primary">Primary</button>
+        </div>
+      </div>
+</body>
+<script>
+    const params = new URLSearchParams(location.search);
+    let id = params.get('id');
+    dadosFilmes = JSON.parse (localStorage.getItem('db_filmes'));
+    let idxFilmes = dadosFilmes.results.findIndex ((elem) => elem.id == id)
+    
+    if (idxFilmes > -1) {
+      let filme = dadosFilmes.results[idxFilme];
+  
+      //detalhe dos filmes
+      document.getElementById('filmeDetalhe').innerHTML = `
+      <div class="container">
+    <div class="row">
+      <img class="imagemFilme" src="https://image.tmdb.org/t/p/w500${filme.poster_path}" alt="">
+      <h1 style="color:white" class="tituloFilme">${filme.title}</h1>
+      <p style="color:white" class="sobreFilme">${filme.overview}</p>
+      <p style="color:white" class="dataFilme">Data de Lançamento: ${filme.release_date}</p>
+    </div>
+  </div>
+      <a href="./lancamentos.html"><button type="button" class="btn btn-secondary btn-sm botao">Voltar para a pagina de a</button></a>
+      <a href="./index.html"><button type="button" class="btn btn-secondary btn-sm botao">Voltar para a pagina inicial</button></a>
+      
+    `
+    }
+    
+    else {
+      alert ('Filme não encontrado')
+    }
+  
+  </script>
+</html>

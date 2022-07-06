@@ -1,0 +1,20 @@
+
+body{
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+}
+body{
+    background-color: black;
+}
+
+.imagemFilme{
+    display: inline;
+    width: 300px;
+    float: left;
+}
+
+.sobreFilme{
+    display: block;
+    float: left;
+}

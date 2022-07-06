@@ -1,0 +1,54 @@
+body{
+    background-color: black;
+}
+h1{
+    color: green;
+}
+.cor1{
+    background-color: greenyellow;
+}
+
+.navbar.navbar-expand-lg.navbar-light.cor1{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0%;
+}
+
+.container .imagens-filmes img{
+    display: flex;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.container .imagens-filmes img:hover{
+    animation-direction: alternate;
+    transform: scale(1.07); 
+}
+
+.container .imagens-filmes img{
+    display: flex;
+    width: 350px;
+}
+
+.container .imagens-filmes .birdbox{
+    width: 94%;
+}
+
+.imagens-filmes .destaques .uncharted{
+    width: 97%;
+}
+
+.tamanho-imagem{
+    display: flex;
+    flex-wrap: wrap;
+    width: 330px;
+}
+.col-md-3 .tamanho-imagem .homem-aranha{
+    width: 300px;
+}
+
+#filmestitulo{
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

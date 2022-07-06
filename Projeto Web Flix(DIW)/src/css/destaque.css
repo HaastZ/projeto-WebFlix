@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+}
+h1{
+    color: rgb(230, 219, 219)
+}
+.cor1{
+    background-color: greenyellow;
+}
+
+.navbar.navbar-expand-lg.navbar-light.cor1{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0%;
+}
+img{
+    cursor: pointer;
+    display: flex;
+    border-radius: 15px;
+}
+img:hover{
+    animation-direction: alternate;
+    transform: scale(1.06);
+}

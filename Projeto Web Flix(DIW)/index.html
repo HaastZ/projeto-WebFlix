@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="https://api.themoviedb.org/3/movie/550?api_key=80f4a6809683279364b9a0994a6ca9ab">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+    <title>WebFlix</title>
+</head>
+<body>
+    <!-- Barra Navbar -->
+    <div class="nome text-center">
+        <h1>WebFlix</h1>
+        <nav class="navbar navbar-expand-lg navbar-light cor1">
+            <div class="container-fluid">
+              <h4>WebFlix</h4>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Novidades</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Entrevistas & MakingOf</a>
+                  </li>
+                  <a class="nav-link active" aria-current="page" href="destaque.html">Destaques</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link active" aria-current="page" href="lancamentos.html">Lançamento</a>
+                  <li class="nav-item dropdown">
+                
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                      Categorias
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                      <li><a class="dropdown-item" href="#">Terror</a></li>
+                      <li><a class="dropdown-item" href="#">Comédia</a></li>
+                      <li><a class="dropdown-item" href="#">Ficção Científica</a></li>
+                      <li><a class="dropdown-item" href="#">Super-Heroi</a></li>
+                      <li><a class="dropdown-item" href="#">Ação</a></li>
+                      <li><a class="dropdown-item" href="#">Aventura</a></li>
+                      <li><a class="dropdown-item" href="#">Romance</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Todos</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Avaliações</a>
+                  </li>
+                </ul>
+                <form class="d-flex" id="pesquisa">
+                  <input class="form-control me-2" type="" id="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                  <a href="#"><button class="btn btn-outline-success" type="submit">Pesquisar</button></a>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+        <!-- Carousel -->
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://tm.ibxk.com.br/2021/10/16/16171343097035.jpg?ims=704x264" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://vincentmgaine.files.wordpress.com/2014/09/lucy-poster-new-film-2014.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.brasilfashionnews.com.br/wp-content/uploads/2020/04/SonicTheHedgehog_2020_Sellthru_BR_1280x720.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <br>
+          
+        <!-- Filmes que talvez você goste -->
+    </div>
+    <div class="container text-light">
+        <h2 id="filmestitulo">Filmes que talvez você goste</h2>
+    </div>
+
+    <div class="container imagens-filmes">
+        <div class="row imagens-filmes">
+            <div class="col-md-3 tamanho-imagem">
+                <img class="birdbox" src="https://upload.wikimedia.org/wikipedia/pt/0/06/Bird_Box_-_filme_p%C3%B4ster.jpeg" class="img-fluid" alt="Bird Box">
+            </div>
+            <div class="col-md-3 tamanho-imagem">
+                <img id="shazam" src="https://cdn.ome.lt/UEyEf4EMNMIXow1_Mukdr1lx9k0=/fit-in/837x500/smart/uploads/conteudo/fotos/shazam-poster.jpg" class="img-fluid" alt="Shazam">
+            </div>
+            <div class="col-md-3 tamanho-imagem">
+                <img src="https://br.web.img3.acsta.net/c_310_420/pictures/17/03/30/22/44/345288.jpg" class="img-fluid" alt="IT a coisa">
+            </div>
+            <div class="col-md-3 tamanho-imagem">
+                <img src="https://play-lh.googleusercontent.com/N77PUO_MDFZ9Yc3pWPEklRn4Sy0MmeXu1Tge_B6qjMUoOBsdMDqSxNfcS7onkExyCrs" class="img-fluid" alt="Gigantes de Aço">
+            </div>
+            <div class="col-12">
+                <br>
+                <button type="button" class="btn btn-secondary btn-sm">+ Carregar mais filmes</button>
+            </div>
+        </div>
+
+         <!-- Em Destaque --> 
+    </div>
+
+    <br> <br>
+
+    <div class="container text-light">
+        <h2 id="filmestitulo">Em Destaque</h2>
+    </div>
+
+    <div class="container imagens-filmes">
+
+        <div class="row imagens-filmes destaques box">
+            <div class="col-md-3 tamanho-imagem">
+              <img class="uncharted"src="https://ingresso-a.akamaihd.net/prd/img/movie/uncharted-fora-do-mapa/479c44b0-e337-43af-bf4a-52dee561bb31.jpg" class="img-fluid" alt="Uncharted">
+            </div>
+            
+            <div class="col-md-3 tamanho-imagem">
+                <img src="./imgs/22968-cartaz.jpg" class="img-fluid" alt="Sonic">
+            </div>
+            <div class="col-md-3 tamanho-imagem">
+                <img src="https://img.elo7.com.br/product/original/2DABEDE/big-poster-filme-mulan-2020-disney-lo002-tamanho-90x60-cm-decoracao-geek.jpg" class="img-fluid" alt="Mulan">
+            </div>
+            <div class="col-md-3 tamanho-imagem homem-aranha">
+                <img src="https://img.elo7.com.br/product/original/3E882D1/big-poster-filme-homem-aranha-sem-volta-para-casa-90x60-cm-3-poster.jpg" class="img-fluid" alt="Homem aranha">
+            </div>
+            <div class="col-12">
+                <br>
+                <a href="destaque.html"><button type="button" class="btn btn-secondary btn-sm">+ Carregar mais filmes</button></a>
+            </div>
+        </div>
+    </div>
+     
+    <br> <br>
+
+    <!-- Lançamentos -->
+    <div class="container text-light">
+        <h2 id="filmestitulo">Lançamentos</h2>
+    </div>
+
+
+    <div class="container ">
+
+        <div class="row imagens-filmes">
+            <div class="col-md-3 tamanho-imagem">
+                <img src="https://seuladogeek.com.br/wp-content/uploads/2022/03/O-Projeto-Adam-filme-Netflix-768x1075.jpg" class="img-fluid" alt="O Projeto Adam">
+            </div>
+            <div class="col-md-3 tamanho-imagem">
+                <img src="https://br.web.img2.acsta.net/pictures/21/12/08/15/46/3923761.jpg" class="img-fluid" alt="Sonic 2">
+            </div>
+            <div class="col-md-3 tamanho-imagem">
+                <img src="https://img.elo7.com.br/product/original/3FBBED5/big-poster-filme-batman-2022-90x60-cm-lo004-presente-geek.jpg" class="img-fluid" alt="Batman">
+            </div>
+            <div class="col-md-3 tamanho-imagem">
+                <img src="https://www.nordicposters.com/movie-poster/lucy_14.jpg" class="img-fluid" alt="Lucy">
+            </div>
+            <div class="col-12">
+                <br>
+                    <a href="./lancamentos.html"><button type="button" class="btn btn-secondary btn-sm">+ Carregar mais filmes</button></a>
+                </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Novidades -->
+    <div class="container text-light">
+        <div class="row ">
+            <div class="col-8 novidades">
+                <h2 id="novidades">Novidades</h2>
+                <div class="container">
+                    <div class="row novidades">
+                        <div class="col-xs-12 col-11 col-md-4">
+                            <img height="100%" width="100%" src="https://observatoriodocinema.uol.com.br/wp-content/uploads/2022/05/thor.jpg" alt="imagem1">
+                        </div>
+                        <div class="col-xs-12 col-12 col-md-6">
+                            <h5 class="texto_novidades">
+                                Thor 4: Visual de Christian Bale como vilão vaza e recebe críticas dos fãs
+                                Novo filme da Marvel vai contar também com o retorno de Natalie Portman e a presença dos Guardiões da Galáxia.
+                                
+                            </h5>
+                            <p class="texto_novidades">NOTÍCIAS - VISTO NA WEB segunda-feira, 11 de abril de 2022
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-top: 10px;">
+                    <div class="row">
+                        <div class="ol-xs-12 col-11 col-md-4">
+                            <img height="100%" width="100%" src="https://portalpopline.com.br/wp-content/uploads/2022/02/morbius-nova-lenda-marvel.jpg" alt="imagem1">
+                        </div>
+                        <div class="col-xs-12 col-12 col-md-6 novidades">
+                            <h5 class="texto_novidades">Morbius: Entenda o motivo do filme da Marvel ter ido bem nas bilheterias apesar das críticas negativas
+                                Estrelado por Jared Leto, as críticas sofridas por Morbius não refletem o desempenho do longa nas bilheterias.
+                                Qual é o pior filme da Marvel? Confira o ranking com as piores notas
+                            </h5>
+                            <p class="texto_novidades">NOTÍCIAS - NEGÓCIOS domingo, 10 de abril de 2022
+                                NOTÍCIAS - VISTO NA WEB
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container novidades" style="margin-top: 10px; margin-bottom: 15px;">
+                    <div class="row">
+                        <div class="ol-xs-12 col-11 col-md-4">
+                            <img width="100%" src="https://veja.abril.com.br/wp-content/uploads/2022/03/000_32744JH.jpg" alt="imagem1">
+                        </div>
+                        <div class="col-xs-12 col-12 col-md-6 novidades">
+                            <h5 class="texto_novidades">Will Smith é banido do Oscar por 10 anos e Academia decide se astro vai perder o prêmio de Melhor Ator
+                                Will Smith deu um tapa em Chris Rock no Oscar 2022, depois do comediante fazer uma piada com sua esposa, Jada Pinkett Smith.
+                                
+                            </h5>
+                            <p class="texto_novidades">NOTÍCIAS - PERSONALIDADES sexta-feira, 8 de abril de 2022
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entrevistas e MakingOf -->
+            <div class="container">
+                <h2 class="entrevistas" id="entrevistas">Entrevistas & Making of</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hl_hzFM0BSY"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="col-4">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yRjbk08W_mY"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="col-4">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ah66LEHyDJc"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <p><b>Filme:</b>Homem Aranha: Sem Volta para Casa<br>
+                            <b>Diretor: </b>Jon Watts<br>
+                            <b>Roteiro: </b>Chris McKenna <b>Estreia:</b> 16/12/2021
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p><b>Filme:</b> Maze Runner: Correr ou Morrer<br>
+                            <b>Diretor: </b>Wes Ball<br>
+                            <b>Roteiro: </b>Noah Oppenheim<b> Estreia: </b> 18/09/2014
+                        </p>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p><b>Filme: </b>Shazam<br>
+                            <b>Diretor: </b>David F. Sandberg<br>
+                            <b>Roteiro: </b>Henry Gayden<b> Estreia:</b> 04/04/2019
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="text-align: right; margin-top: 10px;">
+                <div class="row">
+                    <div class="col-12">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button type="button" class="btn btn-secondary btn-sm">+ Carregar mais entrevistas</button>
+                    </div>
+            </div>
+            </div>
+            
+
+            <!-- Avaliações -->
+            <div class="container">
+                <h2 class="avaliacoes nome-ultimas">Últimas avaliações</h2>
+            </div>
+            <div class="container responsivo avaliacoes">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="profile-header-container">
+                                        <img class="" src="https://br.web.img3.acsta.net/pictures/20/03/30/17/23/0866109.jpg" height="100%" width="100%" />
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <h6>Vinicius</h6>
+                                    <p><b>Avaliação: </b>Gostei do filme, mas o final não me agradou tanto</p>
+                                    <p>★★★☆☆ - 20/02/2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="profile-header-container">
+                                        <img class="" src="https://img.elo7.com.br/product/original/3E882CA/big-poster-filme-homem-aranha-sem-volta-para-casa-90x60-cm-1-poster-geek.jpg" height="100%" width="100%" />
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <h6>Mariana</h6>
+                                    <p><b>Avaliação: </b>Adorei o filme, é muito bom ver os 3 Homens Aranhas juntos</p>
+                                    <p>★★★★★ - 07/03/2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="profile-header-container">
+                                        <img class="" src="https://ingresso-a.akamaihd.net/prd/img/movie/matrix-resurrections/2f864be6-116a-4b63-9465-9a8e08a44abd.jpg" height="100%" width="100%" />
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <h6>Cleitin</h6>
+                                    <p><b>Avaliação:</b> O filme é bom, mas podia melhorar o início, tem muita enrolação</p>
+                                    <p>★★★★☆ - 10/03/2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="text-align: right; margin-top: 10px;">
+                <div class="row">
+                    <div class="col-12">
+                        <button type="button" class="btn btn-secondary btn-sm nome-ultimas">+ Carregar mais avaliações</button>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Rodapé -->
+            <footer>
+                <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
+                    <p class="footertext"> Desenvolvimento de Interfaces Web - ICEI PUC Minas -
+                        <b>Desenvolvido por: Vinícius Almeida de Avila</b>
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</main>
+</body>
+    <script src="./js/api.js"></script>
+</html>
